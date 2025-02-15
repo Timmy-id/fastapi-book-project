@@ -14,10 +14,10 @@ jobs:
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.SERVER_IP }}
-          username: timmy
+          username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/timmy/fastapi-book-project
+            cd /home/ubuntu/fastapi-book-project
             git pull origin main
             source venv/bin/activate
             pip install -r requirements.txt
